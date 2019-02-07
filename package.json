@@ -1,0 +1,36 @@
+{
+  "name": "css-browser",
+  "description": "CSS Browser Selector is a very small javascript which empowers CSS selectors.\r <br />You can now write code for: browser, browser version, platform, platform version, device, device version.\r <br />Best part: no more hacks; all compliant code.\r <br />More info: [http://rafael.adm.br/css_browser_selector](http://rafael.adm.br/css_browser_selector)\r <br />beta/experimental versions: [https://github.com/verbatim/css_browser_selector/](https://github.com/verbatim/css_browser_selector/)",
+  "main": "./lib/browser-selector-min.js",
+  "bin": {
+    "css-browser": "bin/css-browser.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ceelsoin/css-browser.git"
+  },
+  "keywords": [
+    "css",
+    "browser",
+    "selector",
+    "cross"
+  ],
+  "tags": [
+    "css",
+    "cross",
+    "browser"
+  ],
+  "version": "0.0.2",
+  "author": "Celso Inácio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ceelsoin/css-browser/issues"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "homepage": "https://github.com/ceelsoin/css-browser#readme",
+  "devDependencies": {
+    "gulp-minify": "^3.1.0"
+  }
+}
