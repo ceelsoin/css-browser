@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>CSS Browser</title>
+
+    <!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+	  
+	  pre code {
+	  background-color: #eee;
+	  /*border: 1px solid #999;*/
+	  white-space: normal; 
+	  display: block;
+
+
+	  padding: 20px;
+	}
+    </style>
+	
+	<style type="text/css">
+		.ie .example {
+			color: yellow
+		}
+		.ie7 .example {
+			color: orange
+		}
+		.gecko .example {
+			color: gray
+		}
+		.win.gecko .example {
+			color: red
+		}
+		.linux.gecko .example {
+			color: pink
+		}
+		.opera .example {
+			color: green
+		}
+		.konqueror .example {
+			color: blue
+		}
+		.safari .example {
+			color: black
+		}
+		.chrome .example {
+			color: purple
+		}
+		.no_js { display: block }
+		.has_js { display: none }
+		.js .no_js { display: none }
+		.js .has_js { display: block }
+	</style>
+	
+	
+    <!-- Custom styles for this template -->
+    <link href="./assets/sticky-footer.css" rel="stylesheet">
+  </head>
+  <body class="d-flex flex-column h-100">
+    <!-- Begin page content -->
+	<main role="main" class="flex-shrink-0">
+	  <div class="container">
+		<h1 class="mt-5">CSS Browser</h1>
+		<p class="lead">A complete library for identifying browsers by css selectors</p>
+		
+		<p>Add hosted js file to your web site application:</p>
+		<pre><code>&lt;script src="https://raw.githubusercontent.com/ceelsoin/css-browser/master/publish/lib/browser-selector-min.js"&gt;&lt;/script&gt;</code></pre>
+		
+		<p>or add in your application with npm:</p>
+		<pre><code>npm i css-browser</code></pre>
+		
+		<p>...or download complete libary:</p>
+		<pre><code><a href="https://github.com/ceelsoin/css-browser/archive/master.zip">https://github.com/ceelsoin/css-browser/archive/master.zip</a></code></pre>
+		
+		 <h1 class="mt-5">Example</h1>
+		<p class="lead">It's easy!</p>
+		You are in: 
+		<pre><code id="debug" class="example" style="font-size: 14px;"></code></pre>
+		<script type="text/javascript">
+			document.getElementById('debug').innerHTML = navigator.userAgent.toLowerCase();
+		</script>
+		
+		<p>...and made it with this:</p>
+		
+		<pre><code>
+		&lt;style type="text/css"&gt;<br />
+		&nbsp;.ie .example {<br />
+		&nbsp;&nbsp;background-color: yellow<br />
+		&nbsp;}<br />
+		&nbsp;.ie7 .example {<br />
+		&nbsp;&nbsp;background-color: orange<br />
+		&nbsp;}<br />
+		&nbsp;.gecko .example {<br />
+		&nbsp;&nbsp;background-color: gray<br />
+		&nbsp;}<br />
+		&nbsp;.win.gecko .example {<br />
+		&nbsp;&nbsp;background-color: red<br />
+		&nbsp;}<br />
+		&nbsp;.linux.gecko .example {<br />
+		&nbsp;&nbsp;background-color: pink<br />
+		&nbsp;}<br />
+		&nbsp;.opera .example {<br />
+		&nbsp;&nbsp;background-color: green<br />
+		&nbsp;}<br />
+		&nbsp;.konqueror .example {<br />
+		&nbsp;&nbsp;background-color: blue<br />
+		&nbsp;}<br />
+		&nbsp;.safari .example {<br />
+		&nbsp;&nbsp;background-color: black<br />
+		&nbsp;}<br />
+		&nbsp;.chrome .example {<br />
+		&nbsp;&nbsp;background-color: cyan<br />
+		&nbsp;}<br />
+		&nbsp;.no_js { display: block }<br />
+		&nbsp;.has_js { display: none }<br />
+		&nbsp;.js .no_js { display: none }<br />
+		.&nbsp;js .has_js { display: block }<br />
+		&lt;/style&gt;
+		</code></pre>
+		
+		Basically defining it should set according to:
+		
+		<ul>
+		<li>Internet Explorer: Yellow</li>
+		<li>Internet Explorer 7: Orange</li>
+		<li>Gecko Engine on Windows (Firefox, Mozilla, Camino): Red</li>
+		<li>Gecko Engine on Linux (Firefox, Mozilla, Camino): Pink</li>
+		<li>Gecko Engine on Other OS (Firefox, Mozilla, Camino): Gray</li>
+		<li>Opera: Green</li>
+		<li>Konqueror: Blue</li>
+		<li>Safari: Black</li>
+		<li>Chrome: Cyan</li>
+		</ul>
+		
+		<h1 class="mt-5">Using</h1>
+		<p class="lead">It's easy!</p>
+		
+		<b>Set CSS attributes with the code of each browser/os you want to hack</b>
+		<ul>
+			<li>html.gecko div#header { margin: 1em; }</li>
+			<li>.opera #header { margin: 1.2em; }</li>
+			<li>.ie .mylink { font-weight: bold; }</li>
+			<li>.mac.ie .mylink { font-weight: bold; }</li>
+		</ul>
+		
+		<pre><code>.[os].[browser] .mylink { font-weight: bold; } <br> /*without space between .[os] and .[browser]*/</code></pre>
+		
+		<b>Avaliable OS Codes [os]:</b>
+		<ul>
+			<li>.win - Microsoft Windows (all versions)</li>
+			<li>.vista - Microsoft Windows Vista <sup><small style="color: red">new</small></sup></li>
+			<li>.linux - Linux (x11 and linux)</li>
+			<li>.mac - Mac OS</li>
+			<li>.freebsd - FreeBSD</li>
+			<li>.ipod - iPod Touch</li>
+			<li>.iphone - iPhone</li>
+			<li>.ipad - iPad <sup><small style="color: red">new</small></sup></li>
+			<li>.webtv - WebTV</li>
+			<li>.j2me - J2ME Devices (ex: Opera mini) <sup><small style="color: red">changed from mobile to j2me</small></sup></li>
+			<li>.blackberry - BlackBerry <sup><small style="color: red">new</small></sup></li>
+			<li>.android - Google Android <sup><small style="color: red">new</small></sup></li>
+			<li>.mobile - All mobile devices <sup><small style="color: red">new</small></sup></li>
+		</ul>
+		
+		<b>Avaliable Browser Codes [browser]</b>
+		<ul>
+			<li>.ie - Internet Explorer (All versions)</li>
+			<li>.ie8 - Internet Explorer 8.x</li>
+			<li>.ie7 - Internet Explorer 7.x</li>
+			<li>.ie6 - Internet Explorer 6.x</li>
+			<li>.ie5 - Internet Explorer 5.x</li>
+			<li>.gecko - Mozilla, Firefox (all versions), Camino</li>
+			<li>.ff2 - Firefox 2</li>
+			<li>.ff3 - Firefox 3</li>
+			<li>.ff3_5 - Firefox 3.5</li>
+			<li>.ff3_6 - Firefox 3.6 <sup><small style="color: red">new</small></sup></li>
+			<li>.opera - Opera (All versions)</li>
+			<li>.opera8 - Opera 8.x</li>
+			<li>.opera9 - Opera 9.x</li>
+			<li>.opera10 - Opera 10.x</li>
+			<li>.konqueror - Konqueror</li>
+			<li>.webkit or safari - Safari, NetNewsWire, OmniWeb, Shiira, Google Chrome</li>
+			<li>.safari3 - Safari 3.x</li>
+			<li>.chrome - Google Chrome</li>
+			<li>.iron - SRWare Iron</li>
+		</ul>
+		
+		<b>Extra codes:</b>
+		<ul>
+			<li>.js - Will be available when js is enable, so you can show/hide some stuffs</li>
+		</ul>
+		
+				<h5>Happy Hacking!</h5>
+		</div>
+	</main>
+
+	<footer class="footer mt-auto py-3">
+	  <div class="container">
+		<span class="text-muted">Made with <b style="color:red;"><3</b> in Vila Isabel - RJ</span>
+	  </div>
+	</footer>
+	
+	<script src="assets/browser-selector-min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+	</body>
+</html>
